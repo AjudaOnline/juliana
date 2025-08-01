@@ -1,0 +1,71 @@
+CONFIGURAÇÕES PLESK - SITE DA JULIANA
+=====================================
+
+1. CONFIGURAÇÕES DE DOMÍNIO
+---------------------------
+- Document Root: httpdocs
+- PHP Version: 7.4 ou superior
+- Apache Handler: mod_php
+
+2. CONFIGURAÇÕES DE SSL
+-----------------------
+- Ativar SSL para o domínio
+- Redirecionar HTTP para HTTPS
+- Descomentar linhas no .htaccess se necessário
+
+3. CONFIGURAÇÕES DE PERFORMANCE
+-------------------------------
+- Ativar GZIP Compression
+- Ativar Browser Caching
+- Ativar Minification (se disponível)
+
+4. CONFIGURAÇÕES DE SEGURANÇA
+-----------------------------
+- Ativar ModSecurity
+- Configurar Firewall
+- Ativar Anti-DDoS
+
+5. BACKUP
+---------
+- Configurar backup automático
+- Frequência: Diário
+- Retenção: 7 dias
+
+6. MONITORAMENTO
+----------------
+- Ativar logs de acesso
+- Ativar logs de erro
+- Configurar alertas
+
+7. ARQUIVOS IMPORTANTES
+-----------------------
+- index.html (página principal)
+- .htaccess (configurações Apache)
+- robots.txt (SEO)
+- css/ (estilos)
+- js/ (scripts)
+- images/ (imagens)
+
+8. VERIFICAÇÕES PÓS-DEPLOY
+--------------------------
+□ Site carrega corretamente
+□ Imagens aparecem
+□ Links funcionam
+□ Formulários funcionam
+□ SSL funciona
+□ Mobile responsivo
+□ Performance otimizada
+
+9. CONTATOS DE SUPORTE
+----------------------
+- Hosting: [Seu provedor]
+- Domínio: [Seu domínio]
+- Data de Deploy: [Data]
+
+10. NOTAS IMPORTANTES
+---------------------
+- Manter backup do site original
+- Testar em diferentes navegadores
+- Verificar links de doação
+- Monitorar performance
+- Atualizar conteúdo conforme necessário 

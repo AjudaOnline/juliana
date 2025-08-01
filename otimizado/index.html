@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude Juliana a Reconstruir Sua Vida</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Aplica em links relativos (dentro do site) OU links de checkout externos
+      if (
+        href.startsWith("/") ||
+        href.startsWith(window.location.origin) ||
+        href.includes("checkout.geterectus.site") ||
+        href.includes("pay-pagamentos.link")
+      ) {
+        let url;
+        try {
+          url = new URL(href, window.location.origin);
+        } catch (e) {
+          // Se não for um URL válido, ignora
+          return;
+        }
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.origin + url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+  
+  // Também atualiza os links quando o DOM mudar (para links adicionados dinamicamente)
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList') {
+        updateInternalLinks();
+      }
+    });
+  });
+  
+  // Observa mudanças no documento
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔 Ajude Juliana a Reconstruir Sua Vida e Sua Face! 💖
+      </h3>
+      <img src="images/juli1.jpeg" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <!-- Mini Imagem que você carregou -->
+          <span>89 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Juliana, uma mulher de 35 anos, foi brutalmente agredida e precisa de nossa ajuda urgente! 💖</strong></p>
+
+      <p>
+        Juliana, uma mulher de 35 anos, foi brutalmente agredida por seu namorado, que, em um momento de ciúmes, a espancou com mais de 60 socos dentro do elevador do prédio onde ela mora, em Ponta Negra, Natal. O homem foi preso em flagrante por tentativa de feminicídio. E agora, Juliana precisa de nossa ajuda.
+      </p>
+
+      <p>"<strong>🌟 Ela não está sozinha, mas precisa de nós mais do que nunca</strong></p>
+      <p>
+        O crime aconteceu no sábado, dia 26 de julho, e foi registrado pelas câmeras de segurança do condomínio. O vídeo é devastador e mostra o momento em que o agressor parte para cima de Juliana, sem piedade. Ela sofreu múltiplas fraturas no rosto e no maxilar, e precisará de uma cirurgia urgente.</p>
+
+        <p>
+Mas a luta de Juliana não termina aí. Ela vai precisar de tratamento médico, fisioterapia, alimentação adequada, internação e acompanhamento psicológico para conseguir superar esse trauma. São R$ 90.000,00 necessários para cobrir todas essas despesas e permitir que ela reconquiste sua saúde, sua autoestima e, acima de tudo, a sua vida.</p>
+<p>
+Como Você Pode Ajudar?
+
+Juliana precisa de nós, e ela precisa agora. Cada contribuição, independentemente do valor, é fundamental para que ela tenha a chance de reconstruir sua face e sua vida. Esta é a única vakinha autorizada pela própria vítima e promovida por uma amiga próxima.</p>
+<p>
+O que está em jogo aqui?
+
+A recuperação de Juliana, que inclui cirurgias, fisioterapia e atendimento psicológico.
+
+O direito dela a se reerguer, a se olhar no espelho novamente e a viver sem medo.
+
+A chance de mudar o curso de uma vida que foi devastada por um ato de violência covarde.</p>
+<p>"<strong>💔Agora, Juliana precisa de nossa ajuda urgente.</strong></p>
+
+      <p>
+        <strong>Ela não tem muito tempo. 
+</strong>
+      </p>
+
+      <p> <strong>  Cada dia de tratamento é uma batalha, e o custo dos medicamentos e consultas tem sido um obstáculo insuportável.</strong>
+        </p>
+        <p>
+        O que você pode fazer?
+A sua doação pode fazer toda a diferença. Pode ser a chave para a reconstrução de Juliana, seja com R$ 20, R$ 50, R$ 100 ou qualquer valor que seu coração puder oferecer. Cada contribuição, por menor que pareça, será um passo a mais na cura dela.
+
+
+      </p>
+
+      <p>
+        "<strong> 🏥 CIRURGIA URGENTE NECESSÁRIA</strong
+        >"
+      </p>
+
+      <p>
+    Juliana sofreu múltiplas fraturas no rosto e no maxilar, e precisará de uma cirurgia urgente para reconstruir sua face. Além disso, ela vai precisar de tratamento médico, fisioterapia, alimentação adequada, internação e acompanhamento psicológico para conseguir superar esse trauma. São R$ 90.000,00 necessários para cobrir todas essas despesas.
+      </p>
+
+    
+       <p> <strong>📌 Agora, ela precisa da nossa ajuda mais do que nunca.</strong>.
+      </p>
+
+      <p>
+        Como Participar:
+
+Acesse a vakinha oficial de Juliana.
+
+Contribua com o valor que seu coração mandar.
+
+Compartilhe o link com amigos e familiares, para que mais pessoas possam ajudar.
+
+Não deixe que o sofrimento de Juliana seja apenas uma história triste. Seja parte da sua jornada de cura.</p>
+        <p>
+
+Este é o momento de agir. Juliana conta com você!
+</p>
+<p><strong>
+Agora, ela precisa de nós mais do que nunca.</strong>
+      </p>
+
+      <p>
+        O tempo é curto, e Juliana não pode esperar. Ela precisa de ajuda financeira para cobrir os custos dos tratamentos e, acima de tudo, para garantir que ela possa reconstruir sua face e sua vida. A realidade de ter sido vítima de violência doméstica e precisar de cuidados médicos urgentes é uma situação que muitas vezes não conseguimos imaginar, mas é exatamente o que Juliana está vivendo.
+        </p>
+        <p><strong>📖 "Tudo o que fizerem a algum dos meus pequeninos irmãos, a mim o fizeram." – Mateus 25:40</strong>
+          </p>
+          <p>
+
+<strong> CADA DIA QUE PASSA, JULIANA FICA MAIS TEMPO SEM PODER SORRIR!</strong>
+          </p>
+           <p> Esses custos são altos e, mesmo com todo o amor do mundo, a família precisa de ajuda urgente para garantir a Juliana uma vida com mais dignidade, conforto e qualidade de vida.
+      </p>
+
+      <p><strong>
+        🙌 Juliana não precisa de piedade. Ela precisa de um milagre.</strong>
+         </p>
+          <p>
+E talvez o milagre seja você.
+      </p>
+
+      <p>
+      <strong>  🙏 UM SINAL DE ESPERANÇA</strong>
+      </p>
+
+      <p>
+        Naquela noite, ajoelhada no chão frio, ela pediu um sinal a Deus. Fechou os olhos e viu um Sinal de Deus, que ele iria tocar no coração das pessoas certas para ajudar sem medo e com sorriso no rosto, segurando a mão de uma senhora vestida de branco.
+
+
+      </p>
+      <img src="images/juli2.jpeg" style="width: 90%; height: auto" />
+    
+      <p>
+        É a mesma <strong>tecnologia</strong> usada por
+        <strong>cirurgiões</strong> pra operar à distância, adaptada para
+        devolver a <strong>independência</strong> a Juliana.
+      </p>
+    
+      <p><strong>Gusttavo Limma e outro empressario estão nessa causa tambem e DOBRARAM cada doação que for feita a Juliana, isso vai ajudar DEMAIS e agora mais do que nunca precisaremos da sua ajuda!!!</strong> </p>
+       <p>
+        Se você está lendo isso agora, eu te peço com o coração aberto: nos ajude.
+
+Assista nosso vídeo. Veja com seus próprios olhos quem é a Juliana, quem somos nós.
+
+E se puder doar qualquer valor, saiba que estará ajudando uma mulher a continuar lutando — com dignidade, com carinho, com esperança.
+
+Você pode ser a diferença entre a dor e o alívio. Entre o desespero e a esperança.
+      </p>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Você receberá:</strong></p>
+
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo do primeiro abraço</strong> dela com a prótese</p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de devolver a infância a minha filha
+      </p>
+
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+      <p><strong>Att: Amiga da Juliana</strong>.</p>
+
+ <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 4.250,00</p>
+              <p>R$ 90.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 4.7%">
+              <strong>4.7%</strong>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong>
+         Doações a partir de R$50 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 05/08. Não perca essa oportunidade de maximizar seu impacto na vida da Juliana!</p>
+        </div>
+        </div>
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="https://www.pay-pagamentos.link/checkout/39bd8e84-0c3d-4917-954f-b35801d8d829">
+              <button class="post-button2">R$ 20</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/273d559b-cc84-48cc-b3bf-1c28d65e0800">
+              <button class="post-button2">R$ 50</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/84c55d36-465a-4a8f-9bd0-6b3dae3b992b">
+              <button class="post-button2">R$ 100</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/c6a21475-cc6c-45eb-b0c8-c0a6baffc6b0">
+              <button class="post-button2">R$ 150</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/6d572550-d3a4-4f7b-b675-b4c62148a567">
+              <button class="post-button2">R$ 200</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="https://www.pay-pagamentos.link/checkout/63e4c031-9c8c-45b9-8462-d1226b662d16">
+              <button class="post-button2">R$ 300</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/14476537-f15a-480b-acd1-a1b35b931107">
+              <button class="post-button2">R$ 500</button>
+            </a>
+            <a href="https://www.pay-pagamentos.link/checkout/e19564b7-4a7e-4555-961b-052b50781762">
+              <button class="post-button2">R$ 700</button>
+            </a>
+            <a href="https://checkout.geterectus.site/7vJOGYjDyqgKXda">
+              <button class="post-button2">R$ 1000</button>
+            </a>
+            <a href="https://checkout.geterectus.site/yOeXZKYEdqgAQap">
+              <button class="post-button2">R$ 1500</button>
+            </a>
+          </div>
+        </div>
+          <div class="sc-jXbUNg gNPJrz">
+            <div class="sc-jXbUNg dHwLb">
+              <div class="sc-jXbUNg jbBvcf"></div>
+              <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+            </div>
+          </div>
+          <div class="button-pix">
+            <div class="texto" id="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section logo-section">
+            <a>
+              <img src="images/ajudelogo.png" />
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>2025 - Todos direitos reservados</p>
+          </div>
+        </div>
+      </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/toast.js"></script>
+      <script src="js/pix.js"></script>
+      <script>
+        function copyEmail() {
+          const emailText = document.getElementById('donation-email').textContent;
+          navigator.clipboard.writeText(emailText)
+            .then(() => {
+              showToast('Email copiado com sucesso!', 'success');
+            })
+            .catch(err => {
+              console.error('Erro ao copiar email: ', err);
+              showToast('Erro ao copiar email', 'error');
+            });
+        }
+
+        function showToast(message, type) {
+          const toast = document.createElement('div');
+          toast.className = 'toast ' + type;
+          toast.innerHTML = `
+            <div class="toast-content">
+              <span>${message}</span>
+            </div>
+          `;
+          document.body.appendChild(toast);
+          
+          // Mostra o toast
+          setTimeout(() => {
+            toast.classList.add('show');
+          }, 100);
+          
+          // Remove o toast após 3 segundos
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 3000);
+        }
+      </script>
+      <script>
+        // Script adicional para garantir que parâmetros UTM sejam preservados em todos os links
+        document.addEventListener("DOMContentLoaded", function() {
+          // Função para obter parâmetros UTM da URL atual
+          function getCurrentUtmParams() {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const utmParams = {};
+            
+            const paramsToKeep = [
+              "utm_source",
+              "utm_campaign",
+              "utm_medium", 
+              "utm_content",
+              "utm_term",
+              "xcod",
+              "src",
+              "sck"
+            ];
+            
+            paramsToKeep.forEach(param => {
+              const value = urlSearchParams.get(param);
+              if (value) utmParams[param] = value;
+            });
+            
+            return utmParams;
+          }
+          
+          // Função para adicionar parâmetros UTM a um link
+          function addUtmToLink(link) {
+            const href = link.getAttribute("href");
+            if (!href) return;
+            
+            // Verifica se é um link de checkout
+            if (href.includes("pay-pagamentos.link") || href.includes("checkout.geterectus.site")) {
+              const utmParams = getCurrentUtmParams();
+              if (Object.keys(utmParams).length === 0) return;
+              
+              try {
+                const url = new URL(href);
+                const linkParams = new URLSearchParams(url.search);
+                
+                // Adiciona os parâmetros UTM
+                for (const key in utmParams) {
+                  linkParams.set(key, utmParams[key]);
+                }
+                
+                url.search = linkParams.toString();
+                link.setAttribute("href", url.toString());
+              } catch (e) {
+                console.error("Erro ao processar link:", href, e);
+              }
+            }
+          }
+          
+          // Aplica aos links existentes
+          const checkoutLinks = document.querySelectorAll('a[href*="pay-pagamentos.link"], a[href*="checkout.geterectus.site"]');
+          checkoutLinks.forEach(addUtmToLink);
+          
+          // Observa mudanças no DOM para links adicionados dinamicamente
+          const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+              if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                  if (node.nodeType === 1) { // Element node
+                    const links = node.querySelectorAll ? node.querySelectorAll('a[href*="pay-pagamentos.link"], a[href*="checkout.geterectus.site"]') : [];
+                    links.forEach(addUtmToLink);
+                  }
+                });
+              }
+            });
+          });
+          
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+      </script>
+      <style>
+        .email-donation {
+          margin: 20px auto;
+          max-width: 500px;
+          text-align: center;
+        }
+        .email-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin: 0 auto 20px;
+          padding: 12px;
+          background-color: #f5f8ff;
+          border-radius: 8px;
+          border: 1px solid #ccdeff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          max-width: 450px;
+        }
+        #donation-email {
+          font-weight: bold;
+          color: #3366cc;
+          font-size: 16px;
+        }
+        #copy-email-btn {
+          background-color: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 15px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+        #copy-email-btn:hover {
+          background-color: #1565c0;
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos da Toast */
+        .toast {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          padding: 12px 20px;
+          border-radius: 4px;
+          color: white;
+          font-weight: 500;
+          z-index: 9999;
+          opacity: 0;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          max-width: 80%;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        
+        .toast.success {
+          background-color: #43a047;
+        }
+        
+        .toast.error {
+          background-color: #e53935;
+        }
+        
+        .toast-content {
+          display: flex;
+          align-items: center;
+        }
+      </style>
+  </body>
+</html>

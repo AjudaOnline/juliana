@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obrigado pela sua doação! Sua ajuda faz toda a diferença na vida de quem precisa.">
+    <meta name="keywords" content="obrigado, doação, agradecimento, ajuda, solidariedade">
+    <meta property="og:title" content="Obrigado pela Sua Doação! 💖" />
+    <meta property="og:description" content="Sua doação faz toda a diferença! Obrigado por ajudar quem precisa." />
+    <meta property="og:image" content="images/logo.webp" />
+    <meta property="og:url" content="" />
+    <title>Obrigado pela Sua Doação! 💖</title>
+    <link rel="icon" href="images/favi.webp" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .thank-you-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-title {
+            font-size: 36px;
+            color: #00b894;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .impact-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .impact-message h3 {
+            color: #00ff88;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .impact-message p {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .donation-option {
+            background: white;
+            border: 2px solid #00b894;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .donation-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.3);
+            border-color: #00a085;
+        }
+        
+        .donation-option .amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00b894;
+            margin-bottom: 10px;
+        }
+        
+        .donation-option .btn {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .donation-option .btn:hover {
+            background: linear-gradient(135deg, #00a085, #00b894);
+            transform: scale(1.05);
+        }
+        
+        .share-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .share-section h3 {
+            color: #00ff88;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .share-section p {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .share-btn.whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        .share-btn.facebook {
+            background: #1877f2;
+            color: white;
+        }
+        
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        
+        .share-btn.telegram {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .share-btn.copy-link {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .back-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-title {
+                font-size: 28px;
+            }
+            
+            .donation-options {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .share-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            padding: 12px 20px;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            z-index: 9999;
+            opacity: 0;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            max-width: 80%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.success {
+            background-color: #43a047;
+        }
+        
+        .toast.error {
+            background-color: #e53935;
+        }
+        
+        .toast-content {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="success-icon">💖</div>
+        <h1 class="thank-you-title">Obrigado pela Sua Doação! 💖</h1>
+        <p class="thank-you-subtitle">
+            Sua generosidade faz toda a diferença na vida de quem precisa. 
+            Cada doação, por menor que seja, é um passo em direção à esperança e à transformação.
+        </p>
+        
+        <div class="impact-message">
+            <h3>🌟 O Impacto da Sua Ajuda</h3>
+            <p>
+                Com sua doação, você está contribuindo para uma causa importante e ajudando 
+                a transformar vidas. Sua solidariedade inspira outras pessoas a também fazerem a diferença.
+            </p>
+        </div>
+        
+        <div class="share-section">
+            <h3>📱 Compartilhe Esta Causa</h3>
+            <p>
+                Ajude a alcançar mais pessoas! Compartilhe esta causa e multiplique a esperança.
+            </p>
+            
+            <div class="share-buttons">
+                <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                    📱 WhatsApp
+                </button>
+                <button class="share-btn facebook" onclick="shareFacebook()">
+                    📘 Facebook
+                </button>
+                <button class="share-btn instagram" onclick="shareInstagram()">
+                    📷 Instagram
+                </button>
+                <button class="share-btn telegram" onclick="shareTelegram()">
+                    📬 Telegram
+                </button>
+                <button class="share-btn copy-link" onclick="copyLink()">
+                    📋 Copiar Link
+                </button>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="../index.html#donation-section" class="donation-cta" style="display: inline-block; background: linear-gradient(135deg, #00b894, #00a085); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: all 0.3s ease;">
+                💝 FAZER NOVA DOAÇÃO
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Share Functions
+        function shareWhatsApp() {
+            const text = "💖 Ajude esta causa importante! Sua doação pode fazer toda a diferença na vida de quem precisa. 💝";
+            const url = window.location.origin + "/juliana/index.html";
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function shareFacebook() {
+            const url = window.location.origin + "/juliana/index.html";
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+            window.open(facebookUrl, '_blank');
+        }
+        
+        function shareInstagram() {
+            const text = "💖 Ajude esta causa importante! Sua doação pode fazer toda a diferença na vida de quem precisa. 💝";
+            showToast('Copie o texto e compartilhe no Instagram!', 'success');
+            copyToClipboard(text + " " + window.location.origin + "/juliana/index.html");
+        }
+        
+        function shareTelegram() {
+            const text = "💖 Ajude esta causa importante! Sua doação pode fazer toda a diferença na vida de quem precisa. 💝";
+            const url = window.location.origin + "/juliana/index.html";
+            const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+            window.open(telegramUrl, '_blank');
+        }
+        
+        function copyLink() {
+            const url = window.location.origin + "/juliana/index.html";
+            copyToClipboard(url);
+            showToast('Link copiado com sucesso!', 'success');
+        }
+        
+        function copyToClipboard(text) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text);
+            } else {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+        }
+        
+        function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <span>${message}</span>
+                </div>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html> 
